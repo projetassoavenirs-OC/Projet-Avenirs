@@ -299,7 +299,7 @@ h3 { font-size: 1rem; }
 
 .book { display: flex; gap: 16px; padding: 16px; align-items: center; background: var(--peche); }
 .book__cover {
-  flex: 0 0 auto; width: 92px; aspect-ratio: 4 / 5; object-fit: cover;
+  flex: 0 0 auto; width: 96px; height: auto; max-height: 140px; object-fit: contain;
   border: var(--trait); border-radius: 4px; background: var(--blanc);
 }
 .book__title { font: 700 1.1rem/1.25 var(--titre); margin: 6px 0 4px; }

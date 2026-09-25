@@ -26,6 +26,7 @@ public/            Interface (HTML/CSS/JS, aucune dépendance) — servie telle 
   app.js           Application monopage (routes #/…)
   styles.css       Charte Avenirs : #C9DAF8, #FCE5CD, blanc, noir · Space Mono / Open Sans
   assets/          Logos extraits de la charte graphique, icônes
+  images/          Copies des photos Airtable (enfants, couvertures, sorties)
 api/               Fonctions serverless Vercel (Node) — seul endroit qui parle à Airtable
   login.js  logout.js  me.js
   children.js      GET liste / profil d'un enfant
@@ -54,6 +55,10 @@ Aucune dépendance npm : uniquement Node ≥ 20 (fetch et crypto natifs).
   concerne l'enfant sélectionné.
 - Les compétences sont saisies dans un texte séparé par des virgules (ou des retours à la ligne) ;
   les allergies sont stockées dans le champ texte « Allergies », séparées par des virgules.
+- **Images** : les photos sont aussi embarquées dans le code (`public/images`). Pour chaque pièce
+  jointe Airtable, si un fichier du même nom existe dans `public/images` (voir `lib/local-images.js`),
+  l'app affiche cette copie (lien permanent) ; sinon elle affiche l'image hébergée par Airtable.
+  C'est toujours Airtable qui décide quelle image va avec quel enfant ou quelle sortie.
 - Les champs sont référencés par leur identifiant (`fld…`) : on peut les renommer dans Airtable
   sans casser l'application.
 
