@@ -1,0 +1,12 @@
+{
+  "name": "avenirs-parents",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Application parents de l'association Avenirs (prototype) — front statique + fonctions serverless Vercel, données Airtable.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "hash-password": "node scripts/hash-password.mjs"
+  }
+}

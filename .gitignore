@@ -1,0 +1,8 @@
+# Secrets — ne jamais versionner
+.env
+.env.*
+!.env.example
+
+node_modules/
+.vercel/
+.DS_Store
